@@ -39,13 +39,13 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 #### Setar usuário
 
 ```console
-git config --global user.name "Leonardo Comelli"
+git config --global user.name "Victor Caldas"
 ```
 
 #### Setar email
 
 ```console
-git config --global user.email leonardo@software-ltda.com.br
+git config --global user.email contatos.caldas@gmail.com
 ```
 
 #### Setar editor
