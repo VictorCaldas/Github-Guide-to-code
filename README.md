@@ -8,7 +8,7 @@
 * Preparado (staged/index)
 * Consolidado (comitted);
 
-Ajuda
+Comandos de Ajuda Github
 
 Geral
 
