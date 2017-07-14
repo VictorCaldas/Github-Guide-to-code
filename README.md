@@ -30,7 +30,7 @@ git help commit
 git help <qualquer_comando_git>
 ```
 
-## Configuração do GIT
+## Comandos de Configuração do GIT
 
 ### Geral
 
@@ -139,7 +139,7 @@ git commit meu_arquivo.txt meu_outro_arquivo.txt
 git commit meuarquivo.txt -m "minha mensagem de commit"
 ```
 
-### Comando para remover arquivo/diretório
+### Comandos para remover arquivo/diretório
 
 #### Remover arquivo
 
@@ -223,7 +223,7 @@ git log --author=usuario
 git blame -L 12,22 meu_arquivo.txt 
 ```
 
-### Desfazendo operações
+### Comandos para Desfazer operações
 
 #### Desfazendo alteração local (working directory)
 
