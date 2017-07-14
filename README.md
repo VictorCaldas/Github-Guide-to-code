@@ -1,16 +1,13 @@
 # Github-Guide-to-code
 
-# GIT
-
-## Estados
+## Estados dos seus arquivos no git
 
 * Modificado (modified);
 * Preparado (staged/index)
 * Consolidado (comitted);
 
-## Comandos de Ajuda Github
 
-Geral
+## Comandos Ajuda Github
 
 ```console
 git help <Comando específico>
@@ -28,33 +25,31 @@ git help commit
 git help <qualquer_comando_git>
 ```
 
-## Configuração
+## Configuração do GIT
 
 ### Geral
 
-As configurações do GIT são armazenadas no arquivo .gitconfig localizado dentro do diretório do usuário do Sistema Operacional (Ex.: Windows: C:\Users\Documents and Settings\Leonardo ou *nix /home/leonardo).
+As configurações do GIT são armazenadas no arquivo .gitconfig localizado dentro do diretório do usuário do Sistema Operacional. As configurações realizadas através dos comandos abaixo serão incluídas no arquivo .gitconfig
 
-As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
-
-#### Setar usuário
+#### Configurar usuário
 
 ```console
 git config --global user.name "Victor Caldas"
 ```
 
-#### Setar email
+#### Configurar email
 
 ```console
 git config --global user.email contatos.caldas@gmail.com
 ```
 
-#### Setar editor
+#### Configurar editor
 
 ```console
 git config --global core.editor vim
 ```
 
-#### Setar ferramenta de merge
+#### Configurar ferramenta de merge
 
 ```console
 git config --global merge.tool vimdiff
@@ -76,11 +71,12 @@ git config --list
 
 Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo .gitignore não serão adicionados em um repositório. Existem dois arquivos .gitignore, são eles:
 
-Geral: Normalmente armazenado no diretório do usuário do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretórios a serem ignorados por todos os repositórios deverá ser declarado conforme citado acima. O arquivo não precisa ter o nome de .gitignore.
+- Normalmente armazenado no diretório do usuário do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretórios a serem ignorados por todos os repositórios deverá ser declarado conforme citado acima. O arquivo não precisa ter o nome de .gitignore.
 
-Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
+- Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
 
-### Repositório Local
+
+### Repositório
 
 #### Criar novo repositório
 
@@ -93,8 +89,6 @@ git init
 ```console
 git status
 ```
-
-#### Adicionar arquivo/diretório (staged area)
 
 #### Adicionar um arquivo em específico
 
@@ -120,7 +114,7 @@ git add .
 git add -f arquivo_no_gitignore.txt
 ```
 
-### Comitar arquivo/diretório
+### Comandos para comitar arquivo/diretório
 
 #### Comitar um arquivo
 
@@ -140,7 +134,7 @@ git commit meu_arquivo.txt meu_outro_arquivo.txt
 git commit meuarquivo.txt -m "minha mensagem de commit"
 ```
 
-### Remover arquivo/diretório
+### Comando para remover arquivo/diretório
 
 #### Remover arquivo
 
@@ -270,7 +264,7 @@ git remote -v
 #### Vincular repositório local com um repositório remoto
 
 ```console
-git remote add origin git@github.com:leocomelli/curso-git.git
+git remote add origin git@github.com:victorcaldas/projetoAndroid-git.git
 ```
 
 #### Exibir informações dos repositórios remotos
@@ -322,7 +316,7 @@ git fecth
 #### Clonar um repositório remoto já existente
 
 ```console
-git clone git@github.com:leocomelli/curso-git.git
+git clone git@github.com:victorCaldas/projetoAndroid-git.git
 ```
 
 ### Tags
