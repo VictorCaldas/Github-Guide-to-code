@@ -1,4 +1,10 @@
 # Github-Guide-to-code
+Esse guia traz alguns comandos que vão ajudar no dia a dia na hora que voce tiver aquela duvida de como usar o Github.
+
+e com certeza vão ajudar bastante todos!
+Esse guia foi editado a partir do gist do leocomelli
+https://gist.github.com/leocomelli/2545add34e4fec21ec16
+
 
 ## Estados dos seus arquivos no git
 
