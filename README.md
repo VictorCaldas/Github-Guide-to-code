@@ -1,16 +1,115 @@
-# Github-Guide-to-code
+#Github-Guide-to-code
+
+<!-- TOC -->
+
+- [Github-Guide-to-code](#github-guide-to-code)
+    - [Estados dos seus arquivos no git](#estados-dos-seus-arquivos-no-git)
+    - [Comandos Ajuda Github](#comandos-ajuda-github)
+    - [Comandos de Configuração do GIT](#comandos-de-configuração-do-git)
+        - [Geral](#geral)
+            - [Configurar usuário](#configurar-usuário)
+            - [Configurar email](#configurar-email)
+            - [Configurar editor](#configurar-editor)
+            - [Configurar ferramenta de merge](#configurar-ferramenta-de-merge)
+            - [Setar arquivos a serem ignorados](#setar-arquivos-a-serem-ignorados)
+            - [Listar configurações](#listar-configurações)
+        - [Ignorar Arquivos](#ignorar-arquivos)
+        - [Repositório](#repositório)
+            - [Criar novo repositório](#criar-novo-repositório)
+            - [Verificar estado dos arquivos/diretórios](#verificar-estado-dos-arquivosdiretórios)
+            - [Adicionar um arquivo em específico](#adicionar-um-arquivo-em-específico)
+            - [Adicionar um diretório em específico](#adicionar-um-diretório-em-específico)
+            - [Adicionar todos os arquivos/diretórios](#adicionar-todos-os-arquivosdiretórios)
+            - [Adicionar um arquivo que esta listado no .gitignore (geral ou do repositório)](#adicionar-um-arquivo-que-esta-listado-no-gitignore-geral-ou-do-repositório)
+        - [Comandos para comitar arquivo/diretório](#comandos-para-comitar-arquivodiretório)
+            - [Comitar um arquivo](#comitar-um-arquivo)
+            - [Comitar vários arquivos](#comitar-vários-arquivos)
+            - [Comitar informando mensagem](#comitar-informando-mensagem)
+        - [Comandos para remover arquivo/diretório](#comandos-para-remover-arquivodiretório)
+            - [Remover arquivo](#remover-arquivo)
+            - [Remover diretório](#remover-diretório)
+        - [Visualizar hitórico](#visualizar-hitórico)
+            - [Exibir histórico](#exibir-histórico)
+            - [Exibir histórico com diff das duas últimas alterações](#exibir-histórico-com-diff-das-duas-últimas-alterações)
+            - [Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))](#exibir-resumo-do-histórico-hash-completa-autor-data-comentário-e-qtde-de-alterações--)
+            - [Exibir informações resumidas em uma linha (hash completa e comentário)](#exibir-informações-resumidas-em-uma-linha-hash-completa-e-comentário)
+            - [Exibir histórico com formatação específica (hash abreviada, autor, data e comentário)](#exibir-histórico-com-formatação-específica-hash-abreviada-autor-data-e-comentário)
+            - [Exibir histório de um arquivo específico](#exibir-histório-de-um-arquivo-específico)
+            - [Exibir histórico de um arquivo específico que contêm uma determinada palavra](#exibir-histórico-de-um-arquivo-específico-que-contêm-uma-determinada-palavra)
+            - [Exibir histórico modificação de um arquivo](#exibir-histórico-modificação-de-um-arquivo)
+            - [Exibir histório de um determinado autor](#exibir-histório-de-um-determinado-autor)
+            - [Exibir revisão e autor da última modificação de uma bloco de linhas](#exibir-revisão-e-autor-da-última-modificação-de-uma-bloco-de-linhas)
+        - [Comandos para Desfazer operações](#comandos-para-desfazer-operações)
+            - [Desfazendo alteração local (working directory)](#desfazendo-alteração-local-working-directory)
+            - [Desfazendo alteração local (staging area)](#desfazendo-alteração-local-staging-area)
+        - [Repositório Remoto](#repositório-remoto)
+            - [Exibir os repositórios remotos](#exibir-os-repositórios-remotos)
+            - [Vincular repositório local com um repositório remoto](#vincular-repositório-local-com-um-repositório-remoto)
+            - [Exibir informações dos repositórios remotos](#exibir-informações-dos-repositórios-remotos)
+            - [Renomear um repositório remoto](#renomear-um-repositório-remoto)
+            - [Desvincular um repositório remoto](#desvincular-um-repositório-remoto)
+            - [Enviar arquivos/diretórios para o repositório remoto](#enviar-arquivosdiretórios-para-o-repositório-remoto)
+            - [Atualizar repositório local de acordo com o repositório remoto](#atualizar-repositório-local-de-acordo-com-o-repositório-remoto)
+            - [Atualizar os arquivos no branch atual](#atualizar-os-arquivos-no-branch-atual)
+            - [Buscar as alterações, mas não aplica-las no branch atual](#buscar-as-alterações-mas-não-aplica-las-no-branch-atual)
+            - [Clonar um repositório remoto já existente](#clonar-um-repositório-remoto-já-existente)
+        - [Tags](#tags)
+            - [Criando uma tag leve](#criando-uma-tag-leve)
+            - [Criando uma tag anotada](#criando-uma-tag-anotada)
+            - [Criando uma tag assinada](#criando-uma-tag-assinada)
+            - [Criando tag a partir de um commit (hash)](#criando-tag-a-partir-de-um-commit-hash)
+            - [Criando tags no repositório remoto](#criando-tags-no-repositório-remoto)
+            - [Criando todas as tags locais no repositório remoto](#criando-todas-as-tags-locais-no-repositório-remoto)
+        - [Branches](#branches)
+            - [Criando um novo branch](#criando-um-novo-branch)
+            - [Trocando para um branch existente](#trocando-para-um-branch-existente)
+            - [Criar um novo branch e trocar](#criar-um-novo-branch-e-trocar)
+            - [Voltar para o branch principal (master)](#voltar-para-o-branch-principal-master)
+            - [Resolver merge entre os branches](#resolver-merge-entre-os-branches)
+            - [Apagando um branch](#apagando-um-branch)
+            - [Listar branches](#listar-branches)
+            - [Listar branches com informações dos últimos commits](#listar-branches-com-informações-dos-últimos-commits)
+            - [Listar branches que já foram fundidos (merged) com o master](#listar-branches-que-já-foram-fundidos-merged-com-o-master)
+            - [Listar branches que não foram fundidos (merged) com o master](#listar-branches-que-não-foram-fundidos-merged-com-o-master)
+            - [Criando branches no repositório remoto](#criando-branches-no-repositório-remoto)
+            - [Criando um branch remoto com o mesmo nome](#criando-um-branch-remoto-com-o-mesmo-nome)
+            - [Criando um branch remoto com nome diferente](#criando-um-branch-remoto-com-nome-diferente)
+            - [Baixar um branch remoto para edição](#baixar-um-branch-remoto-para-edição)
+            - [Apagar branch remoto](#apagar-branch-remoto)
+        - [Rebasing](#rebasing)
+            - [Fazendo o rebase entre um o branch bug-123 e o master.](#fazendo-o-rebase-entre-um-o-branch-bug-123-e-o-master)
+        - [Stash](#stash)
+            - [Criar um stash](#criar-um-stash)
+            - [Listar stashes](#listar-stashes)
+            - [Voltar para o último stash](#voltar-para-o-último-stash)
+            - [Voltar para um stash específico](#voltar-para-um-stash-específico)
+            - [Criar um branch a partir de um stash](#criar-um-branch-a-partir-de-um-stash)
+        - [Reescrevendo o histórico](#reescrevendo-o-histórico)
+            - [Alterando mensagens de commit](#alterando-mensagens-de-commit)
+            - [Alterar últimos commits](#alterar-últimos-commits)
+            - [Alterando os três últimos commits](#alterando-os-três-últimos-commits)
+            - [Juntando vários commits](#juntando-vários-commits)
+            - [Remover todo histórico de um arquivo](#remover-todo-histórico-de-um-arquivo)
+        - [Bisect](#bisect)
+            - [Iniciar pequinsa binária](#iniciar-pequinsa-binária)
+            - [Marcar o commit atual como ruim](#marcar-o-commit-atual-como-ruim)
+            - [Marcar o commit de uma tag que esta sem o bug/inconsistência](#marcar-o-commit-de-uma-tag-que-esta-sem-o-buginconsistência)
+            - [Marcar o commit como bom](#marcar-o-commit-como-bom)
+            - [Marcar o commit como ruim](#marcar-o-commit-como-ruim)
+            - [Finalizar a pesquisa binária](#finalizar-a-pesquisa-binária)
+
+<!-- /TOC -->
+
 Esse guia traz alguns comandos que vão ajudar no dia a dia nas duvidas de como usar o Github.
 
 Esse guia foi editado a partir do gist de leocomelli
-https://gist.github.com/leocomelli/2545add34e4fec21ec16
-
+<https://gist.github.com/leocomelli/2545add34e4fec21ec16>
 
 ## Estados dos seus arquivos no git
 
 * Modificado (modified);
 * Preparado (staged/index)
 * Consolidado (comitted);
-
 
 ## Comandos Ajuda Github
 
@@ -76,10 +175,9 @@ git config --list
 
 Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo .gitignore não serão adicionados em um repositório. Existem dois arquivos .gitignore, são eles:
 
-- Normalmente armazenado no diretório do usuário do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretórios a serem ignorados por todos os repositórios deverá ser declarado conforme citado acima. O arquivo não precisa ter o nome de .gitignore.
+*Normalmente armazenado no diretório do usuário do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretórios a serem ignorados por todos os repositórios deverá ser declarado conforme citado acima. O arquivo não precisa ter o nome de .gitignore.
 
-- Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
-
+*Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
 
 ### Repositório
 
