@@ -1,7 +1,6 @@
-
 Esse guia traz alguns comandos que vão ajudar no dia a dia nas duvidas de como usar o Git.
 
-Esse guia foi editado a partir do gist de leocomelli <3
+Esse guia foi editado a partir do gist de leocomelli
 <https://gist.github.com/leocomelli/2545add34e4fec21ec16>
 
 <!-- TOC -->
